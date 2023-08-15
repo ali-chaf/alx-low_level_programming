@@ -8,4 +8,4 @@
 int _abs(int n)
 {
 	n = abs(n);
-{
+}
