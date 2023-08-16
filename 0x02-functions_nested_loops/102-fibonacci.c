@@ -4,20 +4,20 @@
  *
  * Return: Always 0.
  */
-int main()
+int main(void)
 {
 	unsigned long first = 0;
 	unsigned long second = 1;
 	unsigned long next;
-	int i ;
+	int i;
 
 
 
-	for (i = 2; i < 52; ++i) 
+	for (i = 2; i < 52; ++i)
 	{
 		next = first + second;
 		printf("%lu", next);
-		if(next != 20365011074)
+		if (next != 20365011074)
 		{
 			putchar(',');
 			putchar(' ');
@@ -25,6 +25,7 @@ int main()
 		first = second;
 		second = next;
 	}
+	putchar('\n');
 
-	return 0;
+	return (0);
 }
