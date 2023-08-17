@@ -4,18 +4,21 @@
  */
 void more_numbers(void)
 {
-	int l = 0, n;
+	int i = 0, j = 0;
 
-	while (l <= 9)
+	while (i < 10)
 	{
-		n = 0;
-		while (n <= 14)
+		j = 0;
+		while (j <= 14)
 		{
-			printf("%d", n);
-			n++;
+			if (j > 9)
+			{
+				_putchar((j / 10) + '0');
+			}
+			_putchar((j % 10) + '0');
+			j++;
 		}
 		_putchar('\n');
-		l++;
+		i++;
 	}
-
 }
