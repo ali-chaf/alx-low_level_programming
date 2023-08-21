@@ -24,11 +24,11 @@ void  puts_half(char *str)
 	{
 		s = (l - 1) / 2;
 		for (i = s + 1; i < l; i++)
-	
+
 		{
 			_putchar(str[i]);
 		}
-	
+
 	}
 	_putchar('\n');
 }
