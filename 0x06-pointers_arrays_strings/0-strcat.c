@@ -7,7 +7,7 @@
  *
  * Return: This return to dest, that concatenates two strings
  */
-char *my_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src);
 {
 	strcat(dest, src);
 
