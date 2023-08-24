@@ -1,4 +1,4 @@
-#include "main.h"
+#include <string.h>
 /**
  * _strncpy - Write a function that copies a string, with number of bytes
  * @dest: This is the output dest
@@ -9,17 +9,7 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *ptr = dest;
-	int i = 0, j = 0;
+	strncpy(dest, src, n);
 
-	while (src[j] != '\0' && j < n)
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-
-	dest[i] = '\0';
-
-	return (ptr);
+	return (dest);
 }
