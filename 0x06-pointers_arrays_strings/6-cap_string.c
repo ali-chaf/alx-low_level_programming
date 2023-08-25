@@ -7,7 +7,7 @@ char *cap_string(char *ptr)
 
     for (i = 0; i < strlen(ptr); i++)
     {
-        if (isspace(ptr[i - 1]) || i == 0 || ispunct(ptr[i - 1]) && ptr[i - 1] != '-' )
+	    if ((isspace(ptr[i - 1]) || i == 0 || (ispunct(ptr[i - 1]) && ptr[i - 1] != '-')))
         {
             if (islower(ptr[i]))
             {
