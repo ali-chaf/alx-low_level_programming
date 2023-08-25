@@ -3,23 +3,22 @@
 #include <string.h>
 char *cap_string(char *ptr)
 {
-        size_t i = 0;
+	    size_t i;
 
-        if (ptr[i] != '\0' && islower(ptr[i]))
+    for (i = 0; i < strlen(ptr); i++)
+    {
+        if (isspace(ptr[i - 1]) || i == 0 || ispunct(ptr[i - 1]) && ptr[i - 1] != '-' )
         {
+            if (islower(ptr[i]))
+            {
                 ptr[i] = toupper(ptr[i]);
+            }
         }
-
-
-        for (i = 1; i < strlen(ptr); i++)
+        else if (isupper(ptr[i]))
         {
-                if (isspace(ptr[i - 1]) || ispunct(ptr[i - 1]))
-                {
-                        if (islower(ptr[i]))
-                        {
-                                ptr[i] = toupper(ptr[i]);
-                        }
-                }
+            ptr[i] = tolower(ptr[i]);
         }
-        return (ptr);
+    }
+
+    return ptr;
 }
