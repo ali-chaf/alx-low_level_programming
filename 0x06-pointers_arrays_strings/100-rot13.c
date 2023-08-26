@@ -1,23 +1,25 @@
+/**
+ * rot13 - a function that encode a string to rot13
+ * @s: the string to be converted
+ * Return: the converted string
+ */
 char *rot13(char *s)
 {
-	char *ptr = s;
+	int i = 0;
 
-	while (*s != '\0')
+	while (s[i] != '\0')
 	{
-		if ((*s >= 'a' && *s <= 'z') || (*s >= 'A' && *s <= 'Z'))
+		while ((s[i] >= 'a' && s[i] <= 'z') ||
+				(s[i] >= 'A' && s[i] <= 'Z'))
 		{
-			if ((*s >= 'a' && *s <= 'm') || (*s >= 'A' && *s <= 'M'))
-			{
-				*s += 13;
-			}
-			else 
-			{
-				*s -= 13;
-			}
-
-		} 
-
-		s++;
+			if ((s[i] >= 'a' && s[i] <= 'm') ||
+					(s[i] >= 'A' && s[i] <= 'M'))
+				s[i] += 13;
+			else
+				s[i] -= 13;
+			i++;
+		}
+		i++;
 	}
-	return ptr;
+	return (s);
 }
