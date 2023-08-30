@@ -2,6 +2,7 @@
 /**
  * is_prime_number - checks if n is a prime number
  * @n: number
+ * @s: number to check
  * Return: 1 if prime, 0 otherwise
 */
 int is_p(int n, int s);
