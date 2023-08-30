@@ -1,52 +1,28 @@
-#include <stdio.h>
-
+#include "main.h"
+/**
+ * is_prime_number - checks if n is a prime number
+ * @n: number
+ * Return: 1 if prime, 0 otherwise
+*/
 int is_prime_number(int n)
 {
+	int s = n / 2;
+
 	if (n <= 1)
-	{
-		return 0;
-	}
-	else if (n <= 3)
-	{
-		return 1;
-	}
-	else if (n % 2 == 0)
-	{
-		return 0;
-	}
-	else
-	{
-
-		for (int i = 3; i * i <= n; i += 2)
-		{
-			if (n % i == 0)
-			{
-				return 0;
-			}
-		}
-		return 1;
-	}
+		return (0);
+	return (is_p(n, s));
 }
-
-int main(void)
+/**
+ * is_p - checks for prime
+ * @n: number
+ * @s: number to check
+ * Return: 1 if prime, 0 otherwise
+*/
+int is_p(int n, int s)
 {
-	int r;
-
-	r = is_prime_number(1);
-	printf("%d\n", r);
-	r = is_prime_number(1024);
-	printf("%d\n", r);
-	r = is_prime_number(16);
-	printf("%d\n", r);
-	r = is_prime_number(17);
-	printf("%d\n", r);
-	r = is_prime_number(25);
-	printf("%d\n", r);
-	r = is_prime_number(-1);
-	printf("%d\n", r);
-	r = is_prime_number(113);
-	printf("%d\n", r);
-	r = is_prime_number(7919);
-	printf("%d\n", r);
-	return (0);
+	if (s <= 1)
+		return (1);
+	else if (n % s == 0)
+		return (0);
+	return (is_p(n, s - 1));
 }
