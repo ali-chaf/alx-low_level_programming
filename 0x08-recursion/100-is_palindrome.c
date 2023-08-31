@@ -1,22 +1,22 @@
-#include "main.h"
+#include <string.h>
 int is_palindrome(char *s);
 /**
- * palindrome_helper - checks if palindrome
- * @start: start
- * @end: end
+ * pali_helper - checks if palindrome
+ * @st: start
+ * @la: end
  * Return: 1 if true, 0 if false
 */
-int palindrome_helper(char *start, char *end)
+int pali_helper(char *st, char *la)
 {
-	if (start >= end)
+	if (st >= la)
 	{
 		return (1);
 	}
-	if (*start != *end)
+	if (*st != *la)
 	{
 		return (0);
 	}
-	return (palindrome_helper(start + 1, end - 1));
+	return (pali_helper(st + 1, la - 1));
 }
 /**
  * is_palindrome - checks if palindrome
@@ -25,12 +25,9 @@ int palindrome_helper(char *start, char *end)
 */
 int is_palindrome(char *s)
 {
-	char *end = s;
-
-	while (*end != '\0')
+	if (*s == '\0')
 	{
-		end++;
+		return (1);
 	}
-	end--;
-	return (palindrome_helper(s, end));
+	return (pali_helper(s, s + strlen(s) - 1));
 }
