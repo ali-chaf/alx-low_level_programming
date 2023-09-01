@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point 
+ * main - Entry point
  * @argc: argument count
  * @argv: argument vector
  * discription: prints the number of arguments passed into it.
@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	if(argv != NULL)
+	if (argv != NULL)
 	printf("%d\n", argc);
 	return (0);
 }
