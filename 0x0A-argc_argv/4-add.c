@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - Entry point
  * @argc: argument count
@@ -19,14 +20,19 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
+		int j;
+
 		int num = atoi(argv[i]);
 
-		if (num <= 0)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		sum += num;
+		sum = sum + num;
 	}
 
 	printf("%d\n", sum);
