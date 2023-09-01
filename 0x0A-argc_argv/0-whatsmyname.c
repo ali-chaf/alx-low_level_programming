@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point that takes two arguments
+ * main - Entry point
  * @argc: argument count
  * @argv: argument vector
  * discription: prints the name of the program
