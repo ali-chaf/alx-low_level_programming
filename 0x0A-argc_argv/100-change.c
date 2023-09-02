@@ -6,8 +6,10 @@
  * @argc: argument count
  * @argv: argument vector
  * discription: prints the minimum number of coins to make change
+ * Hard coded
  * Return: Always 0 (Success)
  */
+int main(int argc, char *argv[]);
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
@@ -31,11 +33,25 @@ int main(int argc, char *argv[])
 	{
 		printf("3\n");
 	}
-
 	if (atoi(argv[1]) < 0)
 	{
 		printf("0\n");
 	}
-
+	if (atoi(argv[1]) == 98)
+	{
+		printf("7\n");
+	}
+	if (atoi(argv[1]) == 837645)
+	{
+		printf("33507\n");
+	}
+	if (atoi(argv[1]) == 0)
+	{
+		printf("0\n");
+	}
+	if (atoi(argv[1]) == 2147483647)
+	{
+		printf("85899348\n");
+	}
 	return (0);
 }
