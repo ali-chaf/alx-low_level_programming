@@ -8,17 +8,17 @@
 char *argstostr(int ac, char **av)
 {
 	int i;
-	//size_t size = 4156;
-	//void *ptr;
+	/*size_t size = 4156;*/
+	/*void *ptr;*/
 
 	for (i = 0; i < ac; i++)
 	{
 		printf("%s\n", av[i]);
 	}
-	//ptr = malloc(size);
-	//if (ptr == NULL)
-	//{
-		//return (NULL);
-	//}
+	/*ptr = malloc(size);
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}*/
 	return (0);
 }
